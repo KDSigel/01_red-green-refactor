@@ -1,6 +1,13 @@
 const capitalizeAndFilter = (randomArray) => {
-  for (const letters of randomArray) {
-    return letters.toUpperCase(); 
-  }
+
+  const capitalArray = randomArray.map(word => 
+    word.toUpperCase()
+  );
+
+  const noFs = capitalArray.filter(item => item.charAt(0) !== 'F');
+
+  return noFs;
+
 };
+
 module.exports = capitalizeAndFilter;
