@@ -7,7 +7,7 @@ describe('fetchQuotes', () => {
       text: expect.any(String),
       image: expect.any(String)
     };
-    
-    expect(fetchQuotes(1)).toEqual(quotes);
+    const actual = await fetchQuotes(1);
+    expect(actual).toEqual(quotes);
   });
 });
